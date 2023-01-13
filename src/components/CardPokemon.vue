@@ -45,14 +45,26 @@ const addIdZeros =  (id) =>{
             <div class="card__container-propertiers__button">
             <i class="fa-solid fa-plus"></i>
         </div>
-    </div>
+  </div>
+
+  <div class="card__show-propertiers">
+  <div>
+  <p class="card__show-propertiers-details">Heigth: 2.5m</p>
+  <p class="card__show-propertiers-details">Peight: 50kg</p>
+   </div>
+  <div>
+  <p class="card__show-propertiers-details">Power 1: eletric</p>
+  <p class="card__show-propertiers-details">Power 2: plant</p>
+</div>
+
+  </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../scss/colors' as c;
   .card{
-    height: 15em;
+    min-height: 15em;
 
      &__container-img{
         height: 10em;
@@ -94,13 +106,46 @@ const addIdZeros =  (id) =>{
       &__button{
         display: flex;
         align-self: flex-end;
-        background-color: aqua;
+        background-color:map-get( c.$colors, "green" );
         position: relative;
-        bottom: 15px;
-        padding: 0.1em;
+        bottom: 20px;
+        padding: 0.2em;
+        border-radius: 5px;
       }
-           
+         
     }
+    &__show-propertiers{
+     height: 5em;
+     display: flex;
+     margin-left: .2em;
+
+     
+     div{
+      display: flex;
+      font-size: .8em;
+      flex-direction: column;
+      // align-items: center;
+
+
+      .card__show-propertiers-details{
+        margin: .2em;
+        background-color: rgb(182, 175, 175);
+        padding: .3em;
+        border-radius: 5px;
+
+    }
+
+     }
+
+
+    }
+    
+ }
+
+ .none{
+
+  display: none;
+
  }
         
 </style>
